@@ -13,11 +13,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("framer-motionanimate")({
-      duration: "200ms",
-      delay: "1s",
-      iterationCount: "1",
-    }),
-  ],
+ 
 };
