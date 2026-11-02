@@ -1,0 +1,427 @@
+/* ── Game Page Layout ─────────────────────────────────────────── */
+.GamePage {
+  min-height: 100vh;
+  background: #0d0d1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "RNS Sanz", sans-serif;
+  color: white;
+  padding-bottom: 60px;
+}
+
+.GamePage .gameHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid rgba(95,61,255,0.3);
+}
+
+.GamePage .gameHeader .backBtn {
+  background: none;
+  border: 1px solid rgba(95,61,255,0.6);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "RNS Sanz", sans-serif;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+.GamePage .gameHeader .backBtn:hover {
+  background: rgba(95,61,255,0.3);
+}
+
+.GamePage .gameHeader .gameTitle {
+  font-size: 22px;
+  font-weight: 900;
+  background: linear-gradient(to right, #c03dff, #5f3dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Player info chips ───────────────────────────────────────── */
+.gamePlayerInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.gamePlayerChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "RNS Sanz", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+/* Username — purple */
+.gamePlayerChip--name {
+  color: #d8b4fe;
+  background: rgba(147, 51, 234, 0.15);
+  border: 1px solid rgba(147, 51, 234, 0.45);
+}
+
+/* Address — blue, clickable copy */
+.gamePlayerChip--address {
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.gamePlayerChip--address:hover {
+  background: rgba(59, 130, 246, 0.22);
+  border-color: rgba(59, 130, 246, 0.7);
+}
+
+/* Balance — gold */
+.gamePlayerChip--balance {
+  color: #fde68a;
+  background: rgba(251, 191, 36, 0.12);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+}
+
+/* ── Wallet Gate ──────────────────────────────────────────────── */
+.WalletGate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 120px;
+  text-align: center;
+}
+.WalletGate h2 {
+  font-size: 28px;
+  font-weight: 900;
+}
+.WalletGate p {
+  color: rgba(255,255,255,0.6);
+  max-width: 380px;
+  font-size: 15px;
+}
+.WalletGate .connectBtn {
+  background: linear-gradient(to right, #c03dff, #5f3dff);
+  border: none;
+  color: white;
+  padding: 14px 36px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  font-family: "RNS Sanz", sans-serif;
+  transition: opacity 0.2s;
+}
+.WalletGate .connectBtn:hover { opacity: 0.85; }
+
+/* ── Game Arena ───────────────────────────────────────────────── */
+.GameArena {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.GameArena .gameStats {
+  display: flex;
+  gap: 30px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(95,61,255,0.3);
+  border-radius: 12px;
+  padding: 12px 30px;
+}
+.GameArena .gameStats .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.GameArena .gameStats .stat .statLabel {
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.GameArena .gameStats .stat .statValue {
+  font-size: 20px;
+  font-weight: 900;
+  color: #c03dff;
+}
+
+.GameArena canvas {
+  border: 2px solid rgba(95,61,255,0.5);
+  border-radius: 12px;
+  background: #0a0a18;
+  display: block;
+}
+
+.GameArena .gameControls {
+  display: flex;
+  gap: 14px;
+}
+.GameArena .gameControls button {
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  font-family: "RNS Sanz", sans-serif;
+  border: none;
+  transition: opacity 0.2s, transform 0.1s;
+}
+.GameArena .gameControls button:hover { opacity: 0.85; transform: translateY(-1px); }
+.GameArena .gameControls .startBtn {
+  background: linear-gradient(to right, #c03dff, #5f3dff);
+  color: white;
+}
+.GameArena .gameControls .pauseBtn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(95,61,255,0.5) !important;
+  color: white;
+}
+
+/* ── Game Over / Rewards Panel ────────────────────────────────── */
+.GameRewards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 30px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(95,61,255,0.4);
+  border-radius: 16px;
+  padding: 36px 48px;
+  min-width: 360px;
+  text-align: center;
+}
+.GameRewards h2 {
+  font-size: 26px;
+  font-weight: 900;
+  background: linear-gradient(to right, #c03dff, #5f3dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.GameRewards .rewardRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+.GameRewards .rewardRow .rewardLabel {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.GameRewards .rewardRow .rewardValue {
+  font-size: 28px;
+  font-weight: 900;
+  color: white;
+}
+.GameRewards .rewardRow .rewardSub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+}
+.GameRewards .divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(95,61,255,0.3);
+}
+.GameRewards .claimBtn {
+  background: linear-gradient(to right, #c03dff, #5f3dff);
+  border: none;
+  color: white;
+  padding: 14px 40px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  font-family: "RNS Sanz", sans-serif;
+  transition: opacity 0.2s;
+  width: 100%;
+}
+.GameRewards .claimBtn:hover { opacity: 0.85; }
+.GameRewards .claimBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.GameRewards .playAgainBtn {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(95,61,255,0.5);
+  color: white;
+  padding: 12px 40px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "RNS Sanz", sans-serif;
+  width: 100%;
+  transition: background 0.2s;
+}
+.GameRewards .playAgainBtn:hover { background: rgba(95,61,255,0.2); }
+
+.GameRewards .multiplierBadge {
+  background: rgba(95,61,255,0.2);
+  border: 1px solid rgba(95,61,255,0.5);
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: #c03dff;
+  font-weight: 700;
+}
+
+.GameRewards .noStakeNote {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  max-width: 280px;
+}
+
+/* ── How to Play ──────────────────────────────────────────────── */
+.HowToPlay {
+  margin-top: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(95,61,255,0.2);
+  border-radius: 12px;
+  padding: 16px 24px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  text-align: center;
+  max-width: 480px;
+}
+.HowToPlay span { color: #c03dff; font-weight: 700; }
+
+/* ── Stats Grid (in GameRewards) ──────────────────────────────── */
+.GameRewards .statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+.GameRewards .statCell {
+  background: rgba(95,61,255,0.1);
+  border: 1px solid rgba(95,61,255,0.25);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+.GameRewards .statCellValue {
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+}
+
+/* ── Leaderboard ──────────────────────────────────────────────── */
+.LeaderboardWrap {
+  margin-top: 28px;
+  width: 100%;
+  max-width: 480px;
+}
+.leaderboardTitle {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 12px;
+}
+.leaderboardTitle #line {
+  height: 1px;
+  background: linear-gradient(to right, rgba(95,61,255,0.04), rgba(95,61,255,0.8), rgba(95,61,255,0.04));
+}
+.leaderboardTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.leaderboardTable th {
+  color: rgba(255,255,255,0.4);
+  font-weight: 600;
+  text-align: left;
+  padding: 6px 10px;
+  border-bottom: 1px solid rgba(95,61,255,0.2);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.leaderboardTable td {
+  padding: 8px 10px;
+  color: rgba(255,255,255,0.8);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.leaderboardTable tr.myRow td {
+  background: rgba(95,61,255,0.12);
+  color: white;
+}
+.leaderboardTable tr:hover td {
+  background: rgba(255,255,255,0.03);
+}
+.youBadge {
+  background: linear-gradient(to right, #c03dff, #5f3dff);
+  color: white;
+  font-size: 9px;
+  font-weight: 900;
+  padding: 2px 5px;
+  border-radius: 4px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+/* ── Race Idle Screen ─────────────────────────────────────────── */
+.raceIdleScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+  padding: 40px 48px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(95,61,255,0.35);
+  border-radius: 16px;
+  max-width: 480px;
+  text-align: center;
+}
+.raceIdleTitle {
+  font-size: 32px;
+  font-weight: 900;
+  background: linear-gradient(to right, #c03dff, #5f3dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "RNS Sanz", sans-serif;
+}
+.raceIdleSub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+}
+.raceRewardPreview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  margin: 8px 0;
+}
+.rewardItem {
+  background: rgba(95,61,255,0.1);
+  border: 1px solid rgba(95,61,255,0.25);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+}

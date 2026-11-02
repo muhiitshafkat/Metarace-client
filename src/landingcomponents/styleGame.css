@@ -1,0 +1,328 @@
+.Games {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .topTitle {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    .title {
+      font-family: RNS Sanz;
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 43px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+    .title1 {
+      color: rgba(255, 255, 255, 1);
+    }
+
+    #line {
+      width: 500px;
+      height: 2px;
+      position: relative;
+      top: 25px;
+      background-image: linear-gradient(
+        to right,
+        rgba(192, 61, 255, 0.04),
+        rgba(95, 61, 255, 1),
+        rgba(192, 61, 255, 0.04)
+      );
+    }
+  }
+  .topText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  #letter {
+    font-family: RNS Sanz;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 423px;
+  }
+  .imgTitle {
+    position: relative;
+    top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+  }
+
+  .GameImage {
+    display: flex !important;
+    justify-content: center;
+    flex-direction: column;
+    width: 347px;
+    height: 347px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    border-radius: 16px;
+    overflow: hidden;
+
+    .boldText {
+      position: relative !important;
+      left: 33px !important;
+      align-items: center !important;
+      font-family: RNS Sanz;
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 29px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: rgba(255, 255, 255, 1);
+    }
+    .lineText {
+      max-width: 240px !important;
+      position: relative !important;
+      left: 33px !important;
+      top: 10px !important;
+      font-family: RNS Sanz;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .bottomBtn:hover {
+      cursor: pointer;
+      background-image: linear-gradient(to right, #5f3dff, #c03dff);
+    }
+    .bottomBtn {
+      display: flex !important;
+      position: relative !important;
+      top: 80px;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 289px;
+      height: 47px;
+      border-radius: 10px;
+      color: white;
+      text-align: center;
+      font-family: RNS Sanz;
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 19px;
+      letter-spacing: 0em;
+      text-align: center !important;
+      background-image: linear-gradient(to right, #c03dff, #5f3dff);
+    }
+    .bottomBtn2:before {
+      backdrop-filter: blur(17px); /* Adjust the blur radius as needed */
+      position: absolute;
+      display: block;
+      content: "";
+      border-radius: 15px;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      z-index: -100;
+    }
+    .bottomBtn2 {
+      z-index: 10;
+      display: flex !important;
+      position: relative !important;
+      top: 80px;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 289px;
+      height: 47px;
+      border-radius: 10px !important;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center !important;
+      font-family: RNS Sanz;
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 19px;
+      letter-spacing: 0em;
+      text-align: left;
+      border: #5f3dff 1px solid;
+    }
+    .bottomBtn2:hover {
+      cursor: pointer;
+      color: white;
+    }
+
+    .buttonWrap {
+      display: flex !important;
+      justify-content: center !important;
+      margin-top: 20px;
+    }
+  }
+}
+@media screen and (max-width: 1280px) {
+  .Games {
+    .title {
+      font-size: 30px !important;
+    }
+    .text {
+      width: 248px;
+    }
+    .title3 {
+      top: 10px !important;
+      font-size: 12px;
+    }
+    .imgTitle {
+      position: relative;
+      top: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .topText {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+    #letter {
+      font-size: 12px;
+    }
+    .imgTitle {
+      gap: 10px;
+    }
+    .GameImage {
+      width: 270px;
+      height: 280px;
+    }
+    .boldText {
+      font-size: 20px !important;
+    }
+    .lineText {
+      font-size: 10px !important;
+    }
+    .bottomBtn {
+      top: 60px !important;
+      width: 240px !important;
+      height: 47px !important;
+    }
+    .bottomBtn2 {
+      top: 68px !important;
+      width: 240px !important;
+      height: 47px !important;
+    }
+  }
+}
+
+/* ─── Game card image overlay fix ───────────────────────────── */
+.Games .GameImage {
+  position: relative;
+}
+/* Dark gradient overlay so text is always readable over any image */
+.Games .GameImage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25) 0%,
+    rgba(0,0,0,0.45) 50%,
+    rgba(0,0,0,0.82) 100%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+}
+/* Keep text above the overlay */
+.Games .GameImage .boldText,
+.Games .GameImage .lineText,
+.Games .GameImage .buttonWrap {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Edge glow on hover per card */
+.Games .leftTitle .GameImage:hover {
+  box-shadow: 0 0 0 2px rgba(121,54,217,0.8), 0 0 30px rgba(121,54,217,0.4), 0 0 60px rgba(121,54,217,0.15) !important;
+}
+.Games .centerTitle .GameImage:hover {
+  box-shadow: 0 0 0 2px rgba(192,61,255,0.8), 0 0 30px rgba(192,61,255,0.4), 0 0 60px rgba(192,61,255,0.15) !important;
+}
+.Games .rightTitle .GameImage:hover {
+  box-shadow: 0 0 0 2px rgba(255,215,0,0.7), 0 0 30px rgba(255,215,0,0.35), 0 0 60px rgba(255,215,0,0.12) !important;
+}
+
+/* ─── Horse card edge glow ───────────────────────────────────── */
+.horseCard {
+  transition: box-shadow 0.3s ease, transform 0.2s ease !important;
+}
+.horseCard:hover {
+  transform: translateY(-4px) !important;
+}
+.horseCard.selected {
+  box-shadow: 0 0 0 2px #9333ea, 0 0 20px rgba(147,51,234,0.5), 0 0 40px rgba(147,51,234,0.2) !important;
+}
+.horseCard.tier-rare:hover {
+  box-shadow: 0 0 0 1px #f59e0b, 0 0 16px rgba(245,158,11,0.4) !important;
+}
+.horseCard.tier-epic:hover {
+  box-shadow: 0 0 0 1px #8b5cf6, 0 0 16px rgba(139,92,246,0.4) !important;
+}
+.horseCard.tier-legendary:hover {
+  box-shadow: 0 0 0 1px #ffd700, 0 0 20px rgba(255,215,0,0.5) !important;
+}
+.Games .GameImage {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  overflow: hidden;
+}
+.Games .GameImage:hover {
+  transform: translateY(-6px) scale(1.01) !important;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5) !important;
+}
+
+.Games .bottomBtn, .Games .bottomBtn2 {
+  transition: background-image 0.3s ease, transform 0.15s ease, color 0.2s ease !important;
+}
+.Games .bottomBtn:hover {
+  transform: translateY(-1px) !important;
+}
+
+/* Mobile — stack game cards */
+@media screen and (max-width: 700px) {
+  .Games .imgTitle {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+    top: 20px !important;
+  }
+  .Games .GameImage {
+    width: 90vw !important;
+    max-width: 360px !important;
+    height: 300px !important;
+  }
+  .Games .bottomBtn, .Games .bottomBtn2 {
+    top: 20px !important;
+    width: 90% !important;
+  }
+  .Games .title { font-size: 24px !important; }
+  .Games #line { width: 60px !important; }
+  .Games .topText { flex-direction: column !important; text-align: center; }
+}
+
+/* ─── Hover & mobile ─────────────────────────────────────────── */
+.Games .GameImage { transition: transform 0.3s ease, box-shadow 0.3s ease !important; overflow: hidden; }
+.Games .GameImage:hover { transform: translateY(-6px) scale(1.01) !important; box-shadow: 0 16px 48px rgba(0,0,0,0.5) !important; }
+.Games .bottomBtn, .Games .bottomBtn2 { transition: background-image 0.3s ease, transform 0.15s ease !important; }
+.Games .bottomBtn:hover { transform: translateY(-1px) !important; }
+
+@media screen and (max-width: 700px) {
+  .Games .imgTitle { flex-direction: column !important; align-items: center !important; gap: 20px !important; top: 20px !important; }
+  .Games .GameImage { width: 90vw !important; max-width: 360px !important; height: 300px !important; }
+  .Games .bottomBtn, .Games .bottomBtn2 { top: 20px !important; width: 90% !important; }
+  .Games .title { font-size: 24px !important; }
+  .Games #line { width: 60px !important; }
+  .Games .topText { flex-direction: column !important; text-align: center; }
+}

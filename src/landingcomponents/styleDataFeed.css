@@ -1,0 +1,108 @@
+/* ─── DataFeed Stats Bar ─────────────────────────────────────── */
+.DataFeed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 30px;
+  padding: 0 20px;
+}
+
+.DataFeed .FeedWrap {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  border: 1.5px solid rgba(95, 61, 255, 0.4);
+  border-radius: 16px;
+  padding: 0;
+  background: rgba(19, 19, 19, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.DataFeed .FeedWrap:hover {
+  border-color: rgba(95, 61, 255, 0.8);
+  box-shadow: 0 0 32px rgba(95, 61, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.DataFeed .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 32px;
+  border-right: 1px solid rgba(95, 61, 255, 0.2);
+  transition: background 0.2s ease;
+  min-width: 180px;
+}
+.DataFeed .stat-item:last-child {
+  border-right: none;
+}
+.DataFeed .stat-item:hover {
+  background: rgba(95, 61, 255, 0.08);
+}
+
+.DataFeed .stat-label {
+  font-family: RNS Sanz;
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.DataFeed .stat-value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.DataFeed .stat-value {
+  font-family: RNS Sanz;
+  font-size: 26px;
+  font-weight: 900;
+  color: rgba(95, 61, 255, 1);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.DataFeed .stat-suffix {
+  font-family: RNS Sanz;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(95, 61, 255, 0.7);
+  text-transform: uppercase;
+}
+
+.DataFeed .stat-trend {
+  font-family: RNS Sanz;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(76, 175, 80, 0.9);
+  letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 768px) {
+  .DataFeed .FeedWrap { gap: 0; }
+  .DataFeed .stat-item { padding: 16px 24px; min-width: 140px; }
+  .DataFeed .stat-value { font-size: 22px; }
+  .DataFeed .stat-label { font-size: 9px; }
+}
+
+@media screen and (max-width: 600px) {
+  .DataFeed .FeedWrap {
+    flex-direction: column;
+    width: 100%;
+    max-width: 340px;
+  }
+  .DataFeed .stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(95, 61, 255, 0.2);
+    padding: 16px;
+    width: 100%;
+  }
+  .DataFeed .stat-item:last-child { border-bottom: none; }
+}

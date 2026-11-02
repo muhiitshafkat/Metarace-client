@@ -1,0 +1,25 @@
+require('dotenv').config({ path: require('path').resolve(__dirname, '../.env') });
+const app = require('./app');
+const cloudinary = require('cloudinary');
+const PORT = process.env.PORT || 4000;
+const HOST = process.env.HOST || "0.0.0.0";
+
+process.on('uncaughtException', (err) => {
+  console.log(`Error: ${err.message}`);
+  process.exit(1);
+});
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+const server = app.listen(PORT, HOST, () => {
+  console.log(`Server running on http://${HOST}:${PORT} — API ready`);
+});
+
+process.on('unhandledRejection', (err) => {
+  console.log(`Error: ${err.message}`);
+  server.close(() => process.exit(1));
+});
